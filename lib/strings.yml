@@ -1,0 +1,46 @@
+newSubmission: |
+  Hey @{{username}}! Thanks for opening the pull request, I'll be reviewing your PR for any mistakes and will let you know if any changes are required.
+  Hang tight while the checks get passed and once the review is complete, I'll be merging your PR.
+
+checksPassed: |
+  [deploy preview]({{deployURL}}) ready!
+
+invalidFormat: |
+  Hey @{{username}}, it seems like the data in the markdown file doesn't match the specified format.
+  Please check the file you have edited/added to be in the following format (including the starting and trailing hyphens).
+  ```
+  ---
+  username: YOUR_USER_NAME
+  fullname: YOUR_FULL_NAME
+  ---
+  ```
+invalidUsername: |
+  Oops! @{{username}}, I think the username or the fullname you provided contains invalid characters.
+  please double check the markdown file for any possible mistakes in your `username` or `fullname`
+    
+mismatchInUsername: |
+  @{{username}} It looks like you have given a different GitHub username in your file.
+  Please ensure that the username you have provided matches your current GitHub username. ie. `{{username}}`
+  It should look like this,
+  ```
+  username: {{username}}
+  ```
+
+emptyFile: |
+  Hey @{{username}}, I tried using my glasses, but I couldn't find anything on your file.
+
+readyToMerge: |
+  Way to Go! All checks passed and Everything looks good to me.
+  Pat yourself on the back while I merge this Pull Request. Your profile will be visible on our website in a while :tada:
+
+unableToMergePR: |
+  Uh oh! Something doesn't look right, maybe a conflict? @rishabh-bansal, we need some here! :rotating_light:
+
+successfullyMerged: |
+  Holy Buckets! Congratulations @{{username}}, this PR has been merged!
+  
+  ![](https://media.giphy.com/media/wZjlCH43M3M0U/giphy.gif)
+
+newIssue: |
+  Thanks for opening this issue, a maintainer will be one his way to help you out in this :+1:
+deployURL: https://deploy-preview-{{number}}--gitme.netlify.com/

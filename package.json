@@ -1,0 +1,53 @@
+{
+  "name": "gitstart-bot",
+  "version": "1.0.0",
+  "description": "A Probot app to manage the GitStart Repositories",
+  "author": "Rishabh Bansal <rishabhbansal1855@gmail.com> (https://github.com/rishabh-bansal/gitstart-bot)",
+  "license": "ISC",
+  "repository": "https://github.com/rishabh-bansal/gitstart-bot.git",
+  "homepage": "https://github.com/rishabh-bansal/gitstart-bot",
+  "bugs": "https://github.com/rishabh-bansal/gitstart-bot/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "js-yaml": "^3.12.0",
+    "probot": "^7.4.0",
+    "wring-js": "0.0.2"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
